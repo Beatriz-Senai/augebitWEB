@@ -28,7 +28,6 @@ include("conexao.php");
         <img class="fotoPerfil" src="imagens/imagemPerfil.png" alt="foto de perfil">
         </div>
     </header>
-    <!-- <script src="telaEstatisticas.js"></script> -->
 
     <div class="infoBtn">
     <div class="bodyBtn">
@@ -45,6 +44,74 @@ include("conexao.php");
         PRODUTOS
     </button>
     </div>
+    </div>
+
+<h2>ESTATÍSTICAS GERAIS DO SISTEMA</h2>
+
+    <div class="dashboard">
+        <div class="card">
+            <i class="ri-box-3-line"></i>
+            <div class="info">
+                <div class="value">1.000</div>
+                <div class="label">Produtos Cadastrados</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <i class="ri-user-3-line"></i>
+            <div class="info">
+                <div class="value">80</div>
+                <div class="label">Clientes Cadastrados</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <i class="ri-user-star-line"></i>
+            <div class="info">
+                <div class="value">10</div>
+                <div class="label">Fornecedores Cadastrados</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <i class="ri-box-3-line"><span style="position: relative; top: -10px; left: -15px; font-size: 16px;">❌</span></i>
+            <div class="info">
+                <div class="value">40</div>
+                <div class="label">Produtos Estoque Baixo</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <i class="ri-calendar-line"></i>
+            <div class="info">
+                <div class="value">0</div>
+                <div class="label">Contas a Pagar Hoje</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <i class="ri-calendar-close-line"></i>
+            <div class="info">
+                <div class="value">0</div>
+                <div class="label">Contas a Pagar Vencidas</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <i class="ri-calendar-line"></i>
+            <div class="info">
+                <div class="value">0</div>
+                <div class="label">Contas a Receber Hoje</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <i class="ri-calendar-close-line"></i>
+            <div class="info">
+                <div class="value">0</div>
+                <div class="label">Contas a Receber Vencidas</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
@@ -75,6 +142,12 @@ include("conexao.php");
 
 <!-- PARTE DO CSS -->
 <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
     header {
     background-color: black;
     height: 180px;
@@ -188,5 +261,66 @@ include("conexao.php");
     align-items: center;
     justify-content: center;
 }
+
+.info1{
+    border: solid purple 1px;
+    height: 100px;
+    width: 100px;
+}
+
+.tudo{
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coluna1, .coluna2, .coluna3{
+    border: 1px solid black;
+    display: column;
+}
+
+h2 {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            border: 1.5px solid #b366ff;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: #888;
+            background-color: #fff;
+        }
+
+        .card i {
+            font-size: 36px;
+            color: #b366ff;
+        }
+
+        .card .info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info .value {
+            font-size: 20px;
+            font-weight: bold;
+            color: #b366ff;
+        }
+
+        .info .label {
+            font-size: 14px;
+        }
 </style>
 <!-- FIM -->
